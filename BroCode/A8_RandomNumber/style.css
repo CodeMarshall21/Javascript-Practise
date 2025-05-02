@@ -3,6 +3,7 @@
     text-align: center;
     background-color: hsla(241, 93%, 61%, 0.5);
     margin: 5em;
+    border-radius: 100px;
 }
 #roll{
     margin: 30px;
@@ -17,4 +18,14 @@
 }
 #roll:hover{
     background-color: hsl(358, 73%, 68%);
+}
+
+.dice{
+    display:block;
+    font-size:3em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: antiquewhite;
+    margin-left:10.3em;
+    margin-right: 10.3em;
+    border-radius: 10px;
 }
