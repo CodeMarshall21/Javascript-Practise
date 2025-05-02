@@ -1,0 +1,20 @@
+#container{
+    display:block;
+    text-align: center;
+    background-color: hsla(241, 93%, 61%, 0.5);
+    margin: 5em;
+}
+#roll{
+    margin: 30px;
+    font-size:5em;
+    padding:10px 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: hsl(358, 69%, 85%);
+    transition:background-color 0.5s;
+    cursor:pointer;
+    border-radius:100px;
+    border-color: rgba(240, 248, 255, 0);
+}
+#roll:hover{
+    background-color: hsl(358, 73%, 68%);
+}
