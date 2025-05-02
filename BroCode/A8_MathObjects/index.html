@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter</title>
+    <title>Math Objects</title>
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    
+    <div id="math">
+        <div id="single">
+        <label>Num: </label>
+        <input id = "num1"><br><br>
+        <button id = "round">Math.round(num)</button>
+        <button id = "floor">Math.floor(num)</button>
+        <button id = "ceil">Math.ceil(num)</button>
+        <button id = "trunc">Math.trunc(num)</button>
+        <button id = "sqrt">Math.sqrt(num)</button><br><br>
+        <button id = "log">Math.log(num)</button>
+        <button id = "sin">Math.sin(num)</button>
+        <button id = "cos">Math.cos(num)</button>
+        <button id = "tan">Math.tan(num)</button>
+        <button id = "abs">Math.abs(num)</button>
+        <button id = "sign">Math.sign(num)</button><br><br>
+        <label>Result: </label>
+        <input type="text" id = "result1" readonly>
+        </div>
+
+        <div id = "double">
+            <label>Num1: </label>
+            <input id = "num2">
+            <label>Num 2: </label>
+            <input id = "num3"><br><br>
+            <button id = "pow">Math.pow(num1,num2)</button><br><br>
+            <label>Result: </label>
+            <input type="text" id = "result2" readonly>
+        </div>
+
+        <div id="constants">
+            <label>PI: </label>
+            <input type = "text" id = "result3" readonly>
+            <button id = "pi">Math.PI</button><br><br>
+            <label>E: </label>
+            <input type = "text" id = "result4" readonly>
+            <button id = "e">Math.E</button>
+        </div>
+
+        <div id="maxandmin">
+            <label>Num 1:</label>
+            <input id="num4">
+            <label>Num 2:</label>
+            <input id="num5">
+            <label>Num 3:</label>
+            <input id="num6"><br><br>
+            <button id = "max">Math.max(num1,num2,num3)</button> 
+            <button id = "min">Math.min(num1,num2,num3)</button><br><br>
+            <label>Result: </label>
+            <input type="text" id = "result5" readonly>
+        </div>
+
+    </div>
+    <!-- <input type="text" id = "result" readonly> -->
 
 
     <script src = index.js></script>
