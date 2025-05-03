@@ -1,15 +1,24 @@
-// ternary operator = a shortcut to if{} and else{} statements
-//                                  helps to assign a variable based on a condition
-//                                  condition ? codeIfTrue : codeIfFalse;
+// SWITCH - can be an efficient replacement to many else if statements
 
-let time = 9;
-let greeting = time < 12 ? "Good morning!" : "Good afternoon!";
-console.log(greeting);
+let testScore = 33
+let letterGrade;
 
-let isStudent = false;
-let message = isStudent ? "You are a student" : "You are NOT a student";
-console.log(message);
+switch(testScore){
+    case testScore >= 90:
+        letterGrade = "A";
+        break;
+    case testScore >= 80:
+        letterGrade = "B";
+        break;
+    case testScore >= 70:
+        letterGrade = "C";
+        break;
+    case testScore >= 60:
+        letterGrade = "D";
+        break;
+    default:
+        letterGrade = "FAIL";
+        break;
+};
 
-let purchaseAmount = 99;
-let discount = purchaseAmount >= 100 ? 10 : 0;
-console.log(`Your total is $${purchaseAmount - purchaseAmount * (discount/100)}`);
+console.log(letterGrade);
