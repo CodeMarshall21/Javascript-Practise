@@ -1,14 +1,3 @@
 body{
-    margin-top: 3em;
-    margin-left: 20em;
-    font-size: 1.2em;
-}
-
-#username{
-    margin-left:10px;
-    margin-right: 10px;
-}
-
-#result{
-    margin-left:35px;
+    font-size:2em;
 }
