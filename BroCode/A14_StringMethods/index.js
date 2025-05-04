@@ -1,3 +1,8 @@
+// string methods = allow you to manipulate and work with text (strings)
+
+
+
+
 // Input fields
 const inputString = document.getElementById("string");
 const inputResult = document.getElementById("result");
