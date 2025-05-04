@@ -1,0 +1,13 @@
+body{
+    margin-top: 3em;
+    margin-left: 25em;
+}
+
+#username{
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+#result{
+    margin-left:35px;
+}
