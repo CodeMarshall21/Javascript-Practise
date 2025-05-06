@@ -14,7 +14,7 @@ while(!loggedIn){
         document.getElementById("myh1").textContent = `Welcome ${username}`;
     }
     else{
-        console.log(`INVALID CREDENTIALS`);
+        document.getElementById("myh1").textContent = `INVALID CREDENTIALS`;
 
     }
 }
