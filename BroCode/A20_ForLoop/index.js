@@ -1,20 +1,5 @@
-// while loop = repeat some code WHILE some condition is true
-
-
-let loggedIn = false;
-let username;
-let password;
-
-while(!loggedIn){
-    username = window.prompt(`Enter you username`);
-    password = window.prompt(`Enter you password`);
-
-    if(username === "myUser" && password === "myPassword123"){
-        loggedIn = true;
-        document.getElementById("myh1").textContent = `Welcome ${username}`;
-    }
-    else{
-        document.getElementById("myh1").textContent = `INVALID CREDENTIALS`;
-
+document.getElementById("start").onclick = function(){
+    for (let i = 10; i > 0; i --){
+        document.write(i);
     }
 }
