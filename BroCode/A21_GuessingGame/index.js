@@ -15,13 +15,12 @@ while(running){
     }else if(userInput < MIN || userInput > MAX){
         window.alert(`ENTER A VALID NUMBER`);
     }else{
+        attemps++;
         if (userInput > ANSWER){
             window.alert(`TOO HIGH ! GUESS AGAIN`);
-            attemps++;
         }
         else if(userInput < ANSWER){
             window.alert(`TOO LOW ! GUESS AGAIN`);
-            attemps++;
         }
         else{
             window.alert(`AWESOME YOU FOUND em in ${attemps} ATTEMPTS !!!`);
