@@ -4,7 +4,7 @@
 let x = 3; // global scope
 
 
-function1();
+function2();
 
 function function1(){
     let x = 1; // local scope
