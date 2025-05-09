@@ -1,11 +1,15 @@
 // array = a variable like structure that can 
 //         hold more than 1 value
 
-let fruits = ["banana", "apple", "orange"];
+let fruits = ["banana", "apple", 69, "orange",true];
 console.log(fruits);
 
+console.log("typeof(fruits[2]) -> ",typeof(fruits[2]));
+console.log("typeof(fruits[4]) - > ",typeof(fruits[4]));
+
+
 console.log(`fruits[2] -> `,fruits[2]);
-console.log(`fruits[3] -> `,fruits[3]);
+console.log(`fruits[5] -> `,fruits[5]);
 
 fruits.push("mango");
 console.log(`fruits.push("mango") -> `, fruits);
