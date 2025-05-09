@@ -3,7 +3,7 @@
 //                    Call the function to execute that code.
 
 function isValid(email){
-    return email.contains("@") && email.comtains(".") ? true : false ;
+    return email.includes("@") && email.includes(".") ? true : false ;
 };
 
 document.getElementById("check").onclick = function(){
