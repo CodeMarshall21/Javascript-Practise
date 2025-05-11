@@ -1,39 +1,71 @@
-// spread operator =  ... allows an iterable such as an
-//                                  array or string to be expanded
-//                                  into separate elements
-//                                 (unpacks the elements)
+// rest parameters = (...rest) allow a function work with a variable
+//                                  number of arguments by bundling them into an array
 
-const Display = document.getElementById("display");
-
-// ------------- EXAMPLE 1 -------------
-console.log(`------------- EXAMPLE 1 -------------`);
-let numbers = [1,2,3,4,5,6,7,8,9,10];
-let MAXIMUMX = Math.max(numbers);
-let Max = Math.max(...numbers);
-console.log(`numbers -> `,numbers)
-
-console.log(`without spread operator -> ${MAXIMUMX}`);
-console.log(`WITH spread operator -> ${Max}`);
-
-// ------------- EXAMPLE 2 -------------
-console.log(`------------- EXAMPLE 2 -------------`);
-
-let Username = "Keshav KV";
-let letters = [...Username];
-
-console.log(`Usernmae -> `,Username)
-console.log(`WITH spread operator -> ${letters}`);
-
-// ------------- EXAMPLE 2 ------------- 
-console.log(`------------- EXAMPLE 3 -------------`);
-console.log(`------------- SHALLOW COPY -------------`);
-
-let fruits = ["apple","banana","orange"];
-let veggies = ["carrots","celery","potatoes"];
-console.log(`fruits - > `,fruits);
-console.log(`veggies - > `,veggies);
+//                                 spread = expands an array into separate elements
+//                                 rest = bundles separate elements into an array
 
 
-let foods = [...fruits,...veggies,"eggs","milk"];
-console.log(`foods -> `,foods);
+// -------- EXAMPLE 1 --------
+console.log(`-------- EXAMPLE 1 --------`);
+function openFridge(...fruits){
+    console.log(`packed -> `,fruits);
+    console.log(`Unpacked -> `,...fruits);
+}
+
+function getFoods(...foods){
+    return foods;
+}
+
+let fruit1 = "apple";
+let fruit2 = "banana";
+let fruit3 = "orange";
+let fruit4 = "grape";
+let fruit5 = "guava";
+
+openFridge(fruit1,fruit2,fruit3,fruit4,fruit5);
+console.log(`foods -> `,getFoods(fruit1,fruit2,fruit3,fruit4,fruit5));
+
+
+console.log(`-------- EXAMPLE 2 --------`);
+
+
+function sum(...nums){
+console.log(`---- sum(...nums) ----`);
+
+    let result = 0;
+    for (let i = 0; i < nums.length; i ++){
+        console.log(`num ${i} = `,nums[i])
+        result += nums[i];
+    }
+    return result
+}
+let result = sum(12,25,67);
+console.log(`sum - > `,result);
+
+function average(...nums){
+console.log(`---- average(...nums) ----`);
+    let result = 0;
+    for (let i = 0; i < nums.length; i ++){
+        console.log(`num ${i} = `,nums[i])
+        result += nums[i];
+    }
+    return Number((result / nums.length).toFixed(2));
+}
+
+let avg = average(12,25,67);
+
+console.log(`average -> `,avg);
+// console.log(typeof(avg));
+
+
+console.log(`-------- EXAMPLE 3 --------`);
+
+
+function combineString (...name){
+    console.log(`name -> `,name)
+    return name.join(" ");
+}
+
+let fullname = combineString("Mr.", "Spongebob", "Squarepants", "III");
+console.log(`fullname - > `,fullname);
 
