@@ -32,17 +32,22 @@ passwordGenerateBtn.onclick = function generatePassword(){
         generateArr.push(passwordArray[2]);
     }
 
-    let password = ``;
+    
     let len = generateArr.length;
-    if (len < 1){
-        window.alert("PLEASE SELECT ATLEAST ONE BOX !!!");
-    }else{
-        for (let i = 0; i < Number(passwordLen.value); i ++){
-            password += generateArr[i % len][Math.floor(Math.random() * (generateArr[i % len].length))]
-        }
+    if (Number(passwordLen.value) < 1){
+        window.alert("BRO SERIOUSLY ? ENTER SOME LENGTH ABOVE 1 !!!");
+        return;
+    }if(len < 1){
+        window.alert("SELECT ATLEAST ONE BOX BITCH !!!");
+        return;
     }
     
+    let password = ``;
+    for (let i = 0; i < Number(passwordLen.value); i ++){
+        password += generateArr[i % len][Math.floor(Math.random() * (generateArr[i % len].length))];
+    }
     passwordResult.textContent = password;
+
 
 }
 
