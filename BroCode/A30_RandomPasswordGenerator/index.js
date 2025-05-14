@@ -6,7 +6,7 @@ const IncNumbersBtn = document.getElementById("IncNumbers");
 const passwordGenerateBtn = document.getElementById("pwGen");
 const passwordResult = document.getElementById("password");
 
-let generateArr = [];
+
 
 const passwordArray = 
                     [
@@ -18,6 +18,7 @@ const passwordArray =
 
 
 passwordGenerateBtn.onclick = function generatePassword(){
+    let generateArr = [];
     if (LowerCaseBtn.checked){
         generateArr.push(passwordArray[0]);
     }
@@ -33,12 +34,16 @@ passwordGenerateBtn.onclick = function generatePassword(){
 
     let password = ``;
     let len = generateArr.length;
-
-    for (let i = 0; i <= passwordLen.value; i ++){
-        password += generateArr[i % len][Math.floor(Math.random() * (generateArr[i % len].length))]
+    if (len < 1){
+        window.alert("PLEASE SELECT ATLEAST ONE BOX !!!");
+    }else{
+        for (let i = 0; i < Number(passwordLen.value); i ++){
+            password += generateArr[i % len][Math.floor(Math.random() * (generateArr[i % len].length))]
+        }
     }
-
+    
     passwordResult.textContent = password;
+
 }
 
 
