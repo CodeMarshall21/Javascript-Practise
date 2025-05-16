@@ -14,6 +14,7 @@ hello(greeting)
 function hello(callback){
     console.log("hello");
     callback();
+    
 }
 
 function greeting(){
