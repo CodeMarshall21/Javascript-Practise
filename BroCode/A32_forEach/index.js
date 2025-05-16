@@ -32,3 +32,17 @@ function display(element){
     console.log(element);
 }
 
+// -------------- EXAMPLE 2 --------------
+
+let fruits = ["apple", "orange", "banana", "coconut"];
+
+fruits.forEach(capitalize);
+fruits.forEach(display);
+
+function capitalize(element,index,arr){
+    arr[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}
+
+function display(element){
+    console.log(element);
+}
