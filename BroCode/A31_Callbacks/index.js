@@ -13,8 +13,7 @@ hello(greeting)
 
 function hello(callback){
     console.log("hello");
-    callback();
-    
+    callback();   //can be any name (but the same as in paramter)
 }
 
 function greeting(){
