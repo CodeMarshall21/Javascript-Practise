@@ -11,7 +11,7 @@ const cube = arr.map(cubed);
 
 console.log(square);
 console.log(cube);
-
+console.log(`original arr is preserved-> `,arr);
 
 function squared(element){
     return Math.pow(element,2);
@@ -29,6 +29,7 @@ const studentsLower = students.map(lowerCase);
 
 console.log(studentsUpper);
 console.log(studentsLower);
+console.log(`original arr is preserved-> `,students);
 
 function upperCase(element){
     return element.toUpperCase();
@@ -36,4 +37,17 @@ function upperCase(element){
 
 function lowerCase(element){
     return element.toLowerCase();
+}
+
+// ------------ EXAMPLE 3 ------------
+
+const dates = [`2025-05-17`,`2025-05-18`,`2025-05-20`];
+const formatDate = dates.map(formatedDates);
+console.log(formatDate);
+console.log(`original arr is preserved-> `,dates);
+
+
+function formatedDates(element){
+    const parts = element.split("-");
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
 }
