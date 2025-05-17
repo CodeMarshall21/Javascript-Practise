@@ -34,3 +34,24 @@ function isAdult(element){
 function isChild(element){
     return element < 18;
 }
+
+
+// ----------- EXAMPLE 3 -----------
+console.log(`----------- EXAMPLE 3 -----------`);
+
+const words = ['apple', 'orange', 'kiwi', 'banana', 'pomegranate', 'coconut',];
+console.log(`words -> `,words   );
+
+let shortWords = words.filter(getShortWords);
+let LongWords = words.filter(getLongWords);
+
+console.log(`words.filter(getShortWords) -> `,shortWords);
+console.log(`words.filter(getLongWords) -> `,LongWords);
+
+function getShortWords(elements){
+    return elements.length < 6; 
+};
+
+function getLongWords(elements){
+    return elements.length >= 6; 
+}
