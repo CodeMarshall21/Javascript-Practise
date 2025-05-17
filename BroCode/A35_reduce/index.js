@@ -1,20 +1,22 @@
 // .reduce() = reduce the elements of an array
 //                     to a single value    
 
+const display = document.getElementById("example");
+const content = [];
+
 // ----------- EXAMPLE 1 -----------
-console.log(`----------- EXAMPLE 1 -----------`);
+
 const prices = [5, 30, 10, 25, 15, 20];
-let i = 0;
-let accum = 0;
+const logOutput = [];
 
-
-console.log(`prices -> `,prices);
-
-const TOTAL = prices.reduce(sum);
-console.log(`prices.reduce(sum) -> `,`₹${TOTAL.toFixed(2)}`);
-
-function sum(accumulator,element){
-    console.log(`${i}th iteration : accumulator -> ${accumulator} and element -> ${element}`);
-    i++;
+const TOTAL = prices.reduce((accumulator, element, index) => {
+    const logLine = `${index}th iteration: accumulator = ${accumulator}, element = ${element}`;
+    console.log(logLine);
+    logOutput.push(`<p>${logLine}</p>`);
     return accumulator + element;
-};
+}, 0);
+
+logOutput.unshift(`<p>prices → ${prices.join(', ')}</p>`);
+logOutput.push(`<p>prices.reduce(sum) → ₹${TOTAL.toFixed(2)}</p>`);
+
+display.innerHTML = logOutput.join("");
