@@ -22,9 +22,15 @@ let ages = [16, 17, 17, 18, 19, 20, 65];
 console.log(`ages -> `,ages);
 
 let adults = ages.filter(isAdult);
+let child = ages.filter(isChild);
 
 console.log(`ages.filter(isAdult) - > `,adults);
+console.log(`ages.filter(isChild) - > `,child);
 
 function isAdult(element){
     return element >= 18;
+};
+
+function isChild(element){
+    return element < 18;
 }
