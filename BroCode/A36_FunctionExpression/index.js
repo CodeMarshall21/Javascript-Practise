@@ -1,6 +1,11 @@
 // function expressions = a way to define functions as
 //                        values or variables
 
+//  1. Callbacks in asynchronous operations
+//  2. Higher-Order Functions
+//  3. Closures
+//  4. Event Listeners
+
 // ----------- EXAMPLE 1 -----------
 
 const hello = function(){
@@ -13,7 +18,7 @@ hello();
 // ----------- EXAMPLE 2 -----------
 
 function hello2 (){
-    console.log("Hello2");
+    console.log("goodbye");
 }
 
 setTimeout(hello2,3000);
@@ -21,7 +26,7 @@ setTimeout(hello2,3000);
 // ----------- EXAMPLE 3 -----------
 
 setTimeout(function(){
-    console.log("Hello3");
+    console.log("see ya later");
 },3000);
 
 // ----------- EXAMPLE 4 -----------
