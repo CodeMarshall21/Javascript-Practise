@@ -7,7 +7,63 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    
+    <pre>
+        constructor = special method for defining the
+                      properties and methods of objects
+
+        instead of creating :
+        const car1 = {
+                make: "ford",
+                model: "mustang",
+                year: 1989,
+                color: "black"
+                colour = function(){
+                        console.log(`you are driving ${this.make this.model}`)
+                    }
+            }
+        const car2 = {
+                make: "Dodge",
+                model: "Charger",
+                year: 2012,
+                color: "black"
+                colour = function(){
+                        console.log(`you are driving ${this.make this.model}`)
+                    }
+            }
+
+for each object, we create a common constructor, which goes like :-
+
+function Car(make,model,year,color){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color
+
+    this.drive = function(ignition){
+        if (ignition === `on` || ignition === `ON`){
+            console.log(`You are driving a ${this.year} ${this.make} ${this.model}...!`);
+        }else if(ignition === `off` || ignition === `OFF`){
+            console.log(`you TURNED OFF ${this.model} !`);
+        }else{
+            console.log(`TURN ON TO DRIVE A ${this.year} ${this.make} ${this.model} !`);
+        }
+    }
+}
+
+console.log(`Car (constructor =>)`,Car)
+
+const car1 = new Car("Ford","Mustang",1989,"Black")
+console.log(`car1 => `,car1)
+car1.drive("ON")
+
+const car2 = new Car("Chevrolet","Camaro",1990,"red")
+console.log(`car2 => `,car2)
+car2.drive("off")
+
+const car3 = new Car("Dodge","Charger",2012,"Black")
+console.log(`car3 => `,car3)
+car3.drive("brroomm")
+    </pre>
     <script src = "index.js"></script>
 </body>
 </html>
