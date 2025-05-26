@@ -7,7 +7,96 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
- 
+ <pre>
+    // inheritance = allows a new class to inherit properties and methods 
+//                         from an existing class (parent -> child)
+//                         helps with code reusability
+
+class Animal{
+    alive = false;
+
+    constructor(){
+        this.alive = true;
+    }
+
+    eat(){
+        return `${this.name} the ANIMAL is eating !`
+    }
+
+    sleep(){
+        return `Sushh ! ${this.name} the ANIMAL is sleeping !`
+    }
+}
+
+class Rabbit extends Animal{
+    
+    name = "Bucks Bunny";
+
+    isAlive(){
+        return this.alive
+    }
+    run(){
+        return `${this.name} the RABBIT is HOPPING !`
+    }
+
+}
+
+class Fish extends Animal{
+    
+    name = "Nemo";
+    
+    isAlive(){
+        return this.alive
+    }
+    swim(){
+        return `${this.name} the FISH is SWIMMING !`
+    }
+
+}
+
+class Hawk extends Animal{
+    
+    name = "Maui";
+      
+    isAlive(){
+        return this.alive
+    }
+    fly(){
+        return `${this.name} the HAWK is FLYING !`
+    }
+
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const hawk = new Hawk();
+
+
+console.log(`PARENT CLASS => `,Animal)
+console.log(rabbit);
+console.log(`rabbit.name => `,rabbit.name);
+console.log(`rabbit.isAlive() => `,rabbit.isAlive());
+console.log(`rabbit.eat() => `,rabbit.eat());
+console.log(`rabbit.sleep() => `,rabbit.sleep());
+console.log(`rabbit.run() => `,rabbit.run());
+
+
+console.log(fish);
+console.log(`fish.name => `,fish.name);
+console.log(`fish.isAlive() => `,fish.isAlive());
+console.log(`fish.eat() => `,fish.eat());
+console.log(`fish.sleep() => `,fish.sleep());
+console.log(`fish.swim() => `,fish.swim());
+
+
+console.log(hawk);
+console.log(`hawk.name => `,hawk.name);
+console.log(`hawk.isAlive() => `,hawk.isAlive());
+console.log(`hawk.eat() => `,hawk.eat());
+console.log(`hawk.sleep() => `,hawk.sleep());
+console.log(`hawk.fly() => `,hawk.fly());
+
+ </pre>
     <script src = "index.js"></script>
 </body>
 </html>
