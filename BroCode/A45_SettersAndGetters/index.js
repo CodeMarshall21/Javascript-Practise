@@ -34,7 +34,7 @@ class User{
         }
     }
 
-
+    // without getters the values are unreadable
     get firstName(){
         return `Firstname: ${this._firstName}`;
     }
