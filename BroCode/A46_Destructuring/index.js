@@ -76,7 +76,7 @@ console.log(``);
 // DESTRUCTURING IN FUNCTION PARAMETERS
 console.log(`EXAMPLE 5: DESTRUCTURING IN FUNCTION PARAMETERS`);
 
-function Destructuring({firstName, lastName, age, job = "UNEMPLOYED"}){
+function Destructuring({firstName, lastName, age, job}){
     console.log(`firstName: `,firstName);
     console.log(`lastName: `,lastName);
     console.log(`age: `,age);
