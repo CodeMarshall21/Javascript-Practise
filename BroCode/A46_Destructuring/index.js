@@ -85,3 +85,5 @@ function Destructuring({firstName, lastName, age, job}){
 console.log(Destructuring);
 console.log("Function Call => Destructuring(person2)")
 Destructuring(person2)
+console.log("Function Call => Destructuring(person1)")
+Destructuring(person1)
