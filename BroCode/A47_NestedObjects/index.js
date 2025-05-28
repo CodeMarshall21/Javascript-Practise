@@ -39,3 +39,50 @@ console.log(``);
 
 console.log(`------------ EXAMPLE 2 ------------`);
 
+class Address{
+    constructor(street, city, country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+class Person{
+    constructor(name, age, ...address){
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+
+    displayDetails(){
+        console.log(`name: `, this.name);
+        console.log(`age: `,this.age);
+        console.log(`--- address details ---`);
+        console.log(`street: `,this.address.street);
+        console.log(`city: `, this.address.city);
+        console.log(`country: `, this.address.country);
+    }
+}
+
+console.log(Address);
+console.log(Person);
+
+const person1 = new Person("Spongebob", 30, "124 Conch St.", 
+                                            "Bikini Bottom", 
+                                            "Int. Waters");
+
+const person2 = new Person("Patrick", 37,   "128 Conch St.", 
+                                            "Bikini Bottom", 
+                                            "Int. Waters");
+
+const person3 = new Person("Squidward", 45, "126 Conch St.", 
+                                            "Bikini Bottom", 
+                                            "Int. Waters");
+
+// IM JUST LAZY HERE...
+const obj = [person1,person2,person3];
+
+for (const objects of obj){
+    objects.displayDetails();
+    console.log(``);
+}
