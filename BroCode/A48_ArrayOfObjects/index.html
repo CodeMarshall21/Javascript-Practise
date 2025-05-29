@@ -7,7 +7,102 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    
+    <pre>
+        const fruits = [ {name: "apple", color: "red", calories: 95}, 
+                          {name: "orange", color: "orange", calories: 45}, 
+                          {name: "banana", color: "yellow", calories: 105}, 
+                          {name: "coconut", color: "white", calories: 159}, 
+                          {name: "pineapple", color: "yellow", calories: 37}];
+
+console.log(`const fruits => `,fruits)
+
+// Access properties of a fruit object
+console.log(`Access properties of a fruit object`)
+console.log(`fruits[1].name -> `,fruits[1].name);
+console.log(``);
+
+
+// Add a new fruit object
+console.log(`Add a new fruit object`);
+fruits.push({name:"berries",color: "red", calories: 46});
+console.log(`fruits.push({name:"berries",color: "red", calories: 46}); => `,fruits)
+console.log(``);
+
+// Remove the last fruit object
+console.log(`Remove the last fruit object`);
+fruits.pop();
+console.log(`fruits.pop(); => `,fruits)
+console.log(``);
+
+// Remove fruit objects by indices
+console.log(`Remove fruit objects by indices`);
+const slicedElements = fruits.slice(1,3);
+console.log(`const slicedElements = fruits.slice(1,3) => `,slicedElements)
+console.log(``);
+
+// ---------- forEach() ----------
+console.log(`---------- forEach() ----------`);
+
+fruits.forEach(
+                (fruit,index) => {
+                    console.log(`fruit ${index}: `,fruit)
+                }
+            );
+
+fruits.forEach(
+                (fruit) => {
+                    console.log(`fruit.name: `,fruit.name)
+                }
+            );
+fruits.forEach(
+                (fruit) => {
+                    console.log(`fruit.color: `,fruit.color)
+                }
+            );
+
+console.log(``);
+
+// ---------- map() ----------
+console.log(`---------- map() ----------`);
+const fruitsNames = fruits.map(
+                                (fruit) => fruit.name
+                            )
+const fruitsColor = fruits.map(
+                                (fruit) => fruit.color
+)
+
+const fruitsCalories = fruits.map(
+                                    (fruit) => fruit.calories
+)
+
+console.log(`fruitsNames = fruits.map((fruit) => fruit.name) => `,fruitsNames);
+console.log(`fruitsColor => `,fruitsColor);
+console.log(`fruitsCalories => `,fruitsCalories);
+
+console.log(``);
+
+// ---------- filter() ----------
+console.log(`---------- filter() ----------`);
+const yellowFruits = fruits.filter((fruit) => fruit.color === "yellow");
+const lowCalFruit = fruits.filter((fruit) => fruit.calories < 100);
+const highCalFruit = fruits.filter((fruit) => fruit.calories > 100);
+
+console.log(`yellowFruits => `,yellowFruits);
+console.log(`lowCalFruit => `,lowCalFruit);
+console.log(`highCalFruit => `,highCalFruit);
+
+console.log(``);
+
+// ---------- reduce() ----------
+console.log(`---------- reduce() ----------`);
+
+const maxCalorie = fruits.reduce((max, curr) => max.calories > curr.calories ? max : curr);
+const minCalorie = fruits.reduce((min, curr) => min.calories < curr.calories ? min : curr)
+
+console.log(maxCalorie);
+console.log(minCalorie);
+console.log(``);
+    </pre>
     <script src = "index.js"></script>
 </body>
 </html>
