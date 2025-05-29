@@ -65,7 +65,9 @@ const fruitsCalories = fruits.map(
                                     (fruit) => fruit.calories
 )
 
-console.log(`fruitsNames = fruits.map((fruit) => fruit.name) => `,fruitsNames);
+console.log(`fruitsNames = fruits.map(
+    (fruit) => fruit.name
+    ) => `,fruitsNames);
 console.log(`fruitsColor => `,fruitsColor);
 console.log(`fruitsCalories => `,fruitsCalories);
 
@@ -89,6 +91,8 @@ console.log(`---------- reduce() ----------`);
 const maxCalorie = fruits.reduce((max, curr) => max.calories > curr.calories ? max : curr);
 const minCalorie = fruits.reduce((min, curr) => min.calories < curr.calories ? min : curr)
 
-console.log(maxCalorie);
+console.log(`maxCalorie = fruits.reduce(
+    (max, curr) => max.calories > curr.calories ? max : curr
+    ) => `,maxCalorie);
 console.log(minCalorie);
 console.log(``);
