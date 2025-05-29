@@ -73,9 +73,17 @@ console.log(``);
 
 // ---------- filter() ----------
 console.log(`---------- filter() ----------`);
+const yellowFruits = fruits.filter((fruit) => fruit.color === "yellow");
+const lowCalFruit = fruits.filter((fruit) => fruit.calories < 100);
+const highCalFruit = fruits.filter((fruit) => fruit.calories > 100);
+
+console.log(`yellowFruits => `,yellowFruits);
+console.log(`lowCalFruit => `,lowCalFruit);
+console.log(`highCalFruit => `,highCalFruit);
 
 console.log(``);
 
 // ---------- reduce() ----------
 console.log(`---------- reduce() ----------`);
+
 console.log(``);
