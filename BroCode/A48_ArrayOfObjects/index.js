@@ -86,4 +86,9 @@ console.log(``);
 // ---------- reduce() ----------
 console.log(`---------- reduce() ----------`);
 
+const maxCalorie = fruits.reduce((max, curr) => max.calories > curr.calories ? max : curr);
+const minCalorie = fruits.reduce((min, curr) => min.calories < curr.calories ? min : curr)
+
+console.log(maxCalorie);
+console.log(minCalorie);
 console.log(``);
