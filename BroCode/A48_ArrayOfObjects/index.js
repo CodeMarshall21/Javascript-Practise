@@ -54,10 +54,26 @@ console.log(``);
 
 // ---------- map() ----------
 console.log(`---------- map() ----------`);
+const fruitsNames = fruits.map(
+                                (fruit) => fruit.name
+                            )
+const fruitsColor = fruits.map(
+                                (fruit) => fruit.color
+)
+
+const fruitsCalories = fruits.map(
+                                    (fruit) => fruit.calories
+)
+
+console.log(`fruitsNames = fruits.map((fruit) => fruit.name) => `,fruitsNames);
+console.log(`fruitsColor => `,fruitsColor);
+console.log(`fruitsCalories => `,fruitsCalories);
+
 console.log(``);
 
 // ---------- filter() ----------
 console.log(`---------- filter() ----------`);
+
 console.log(``);
 
 // ---------- reduce() ----------
