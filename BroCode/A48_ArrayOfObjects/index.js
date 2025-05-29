@@ -33,6 +33,22 @@ console.log(``);
 // ---------- forEach() ----------
 console.log(`---------- forEach() ----------`);
 
+fruits.forEach(
+                (fruit,index) => {
+                    console.log(`fruit ${index}: `,fruit)
+                }
+            );
+
+fruits.forEach(
+                (fruit) => {
+                    console.log(`fruit.name: `,fruit.name)
+                }
+            );
+fruits.forEach(
+                (fruit) => {
+                    console.log(`fruit.color: `,fruit.color)
+                }
+            );
 
 console.log(``);
 
