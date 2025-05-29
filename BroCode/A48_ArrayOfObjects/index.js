@@ -26,10 +26,14 @@ console.log(``);
 
 // Remove fruit objects by indices
 console.log(`Remove fruit objects by indices`);
+const slicedElements = fruits.slice(1,3);
+console.log(`const slicedElements = fruits.slice(1,3) => `,slicedElements)
 console.log(``);
 
 // ---------- forEach() ----------
 console.log(`---------- forEach() ----------`);
+
+
 console.log(``);
 
 // ---------- map() ----------
