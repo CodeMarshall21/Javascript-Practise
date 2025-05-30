@@ -55,7 +55,36 @@ console.log(``);
 
 console.log(`---------- EXAMPLE 3 ----------`);
 
+function ScoreCalculation(){
+    let score = 0;
 
+    function increaseScore(points){
+        score += points;
+        console.log(`+${points} pts`);
+    }
+
+    function decreaseScore(points){
+        score -= points;
+        console.log(`-${points} pts`);
+    }
+
+    function getScore(){
+        console.log(`Total Score: ${score}`);
+    }
+
+
+
+    return {increaseScore, decreaseScore, getScore};
+}
+
+const scoreBoard = ScoreCalculation();
+console.log(ScoreCalculation)
+scoreBoard.increaseScore(15);
+scoreBoard.increaseScore(30);
+scoreBoard.decreaseScore(5);
+scoreBoard.decreaseScore(3);
+
+scoreBoard.getScore();
 
 
 
