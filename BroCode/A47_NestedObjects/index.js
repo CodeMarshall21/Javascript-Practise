@@ -67,22 +67,52 @@ class Person{
 console.log(Address);
 console.log(Person);
 
-const person1 = new Person("Spongebob", 30, "124 Conch St.", 
-                                            "Bikini Bottom", 
-                                            "Int. Waters");
-
-const person2 = new Person("Patrick", 37,   "128 Conch St.", 
-                                            "Bikini Bottom", 
-                                            "Int. Waters");
-
-const person3 = new Person("Squidward", 45, "126 Conch St.", 
-                                            "Bikini Bottom", 
-                                            "Int. Waters");
-
 // IM JUST LAZY HERE...
-const obj = [person1,person2,person3];
+// const obj = [person1,person2,person3];
+// const obj = [];
 
-for (const objects of obj){
-    objects.displayDetails();
-    console.log(``);
+// const person1 = new Person("Spongebob", 30, "124 Conch St.", 
+//                                             "Bikini Bottom", 
+//                                             "Int. Waters");
+// obj.push(person1);
+
+// const person2 = new Person("Patrick", 37,   "128 Conch St.", 
+//                                             "Bikini Bottom", 
+//                                             "Int. Waters");
+// obj.push(person2);
+
+
+// const person3 = new Person("Squidward", 45, "126 Conch St.", 
+//                                             "Bikini Bottom", 
+//                                             "Int. Waters");
+// obj.push(person3);
+
+
+
+
+// for (const objects of obj){
+//     objects.displayDetails();
+//     console.log(``);
+// }
+
+const ObjectArray = [];
+
+function addPerson(callback, name, age, street, city, country){
+    const personObj = new Person(name, age, street, city, country);
+    callback(personObj);
 }
+
+function addToArray(object){
+    ObjectArray.push(object);
+}
+
+addPerson(addToArray, "Spongebob", 30, "124 Conch St.", "Bikini Bottom", "Int. Waters");
+addPerson(addToArray, "Patrick", 37,   "128 Conch St.", "Bikini Bottom", "Int. Waters");
+addPerson(addToArray, "Squidward", 45, "126 Conch St.", "Bikini Bottom", "Int. Waters");
+
+ObjectArray.forEach(
+                    (person) => {
+                        person.displayDetails();
+                        console.log(``);
+                    }
+                )
