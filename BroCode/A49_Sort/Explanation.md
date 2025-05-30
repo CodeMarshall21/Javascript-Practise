@@ -76,7 +76,7 @@ fruits.sort((a, b) => a.localeCompare(b)); // a method that handles case differe
 ✅ For complex data like **arrays of objects**, you can sort based on properties too (let me know if you want an example).
 
 ---
- # How does sort(a,b => a - b) work ?
+ # How does `sort((a,b) => a - b)` work Internally?
 Let's break it down **step by step** so you’ll get the **exact internal meaning** of:
 
 ```javascript
