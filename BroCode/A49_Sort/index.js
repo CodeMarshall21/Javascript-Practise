@@ -24,5 +24,27 @@ console.log(`FORWARD SORTING:
 console.log(`BACKWARD SORTING: 
     integerArray.sort((a,b) => b - a) => `,integerArray.sort((a,b) => b - a));
 
+console.log(``);
+
+
+console.log(`-------- Sorting Array of Objects --------`);
+const objectsArr = [
+    {name: "Spongebob", age: 30, gpa: 3.0},
+    {name: "Patrick", age: 37, gpa: 1.5},
+    {name: "Squidward", age: 51, gpa: 2.5},
+    {name: "Sandy", age: 27, gpa: 4.0}
+]
+console.log(`objectsArr => 
+    `,objectsArr)
+
+console.log(`objectsArr.sort((a,b) => a.age - b.age) => 
+    `,objectsArr.sort((a,b) => a.age - b.age))
+
+
+console.log(`objectsArr.sort((a,b) => a.name.localeCompare(b.name)) =>    the only way to compare strings
+    `,objectsArr.sort((a,b) => a.name.localeCompare(b.name)));
+
+console.log(`objectsArr.sort((a,b) => b.name.localeCompare(a.name)) =>    reverse order
+    `,objectsArr.sort((a,b) => b.name.localeCompare(a.name)))
 
 console.log(``);
