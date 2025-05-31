@@ -26,7 +26,7 @@ calculateTrigger.onclick = function calculate(){
         yearsInput.value = 0;
     }
     let result = principal * Math.pow((1 + interest), years);
-    totalOutput.textContent = result.toLocaleString(undefined, {style: "currency", currency: "INR"});
+    totalOutput.textContent = result.toLocaleString("hi-IN", {style: "currency", currency: "INR"});
     
 }
 
