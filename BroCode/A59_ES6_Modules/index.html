@@ -7,7 +7,44 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    
-    <script src = "index.js"></script>
+    <pre>
+        ----------MathUtil.js----------
+        export const PI = 3.14159;
+
+        export function getCircumference(radius){
+            return 2 * PI * radius;   
+        }
+
+        export function getArea(radius){
+            return PI * Math.pow(radius, 2);
+        }
+
+        export function getVolume(radius){
+            return 4/3 * PI * Math.pow(radius, 3);
+        }
+
+
+        ----------index.js----------
+        // ES6 Module = An external file that contains reusable code
+        //                          that can be imported into other JavaScript files
+        //                          Can contain variables, classes, functions ... and more
+        //                          Introduced as part of ECMAScript 2015 update
+
+        import {PI, getArea, getCircumference, getVolume} from './MathUtil.js';
+
+
+        console.log(`PI => `, PI);
+        const cicumference = getCircumference(10);
+        const area = getArea(10);
+        const volume = getVolume(10);
+
+        console.log(`cicumference => `,cicumference.toFixed(2));
+        console.log(`area => `,area.toFixed(2));
+        console.log(`volume => `,volume.toFixed(2));
+
+
+        also add : &lt;script <b>type = "module"</b> src = "index.js"&gt; &lt;/script&gt;
+    </pre>
+    <script type = "module" src = "index.js"></script>
 </body>
 </html>
