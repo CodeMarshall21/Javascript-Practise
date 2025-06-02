@@ -24,21 +24,27 @@ console.log(`function syncExec(){
 }`)
 console.log(`calling syncExec() => `); syncExec();
 
-console.log(``);
 
-console.log(`--------- Asynchronous ---------`)
+//DONT MIND THE setTimeout FUNCITON OUTSIDE, I JUST DID TO MAKE IT LOOK 
+// THE READ UNDERSTANDING IS ABOUT USAGE OF CALLBACKS TO IMPLEMENT ASYNCHRONOUS EXECUTION
 
-function func1(callback){
-    setTimeout(() => {
-        console.log("Task 1");
-        callback();
-    }, 5000)
-}
+setTimeout(() => {
+        console.log(``);
 
-function func2(){
-    console.log("Task 2");
-    console.log("Task 3");
-    console.log("Task 4");
-}
+        console.log(`--------- Asynchronous ---------`)
 
-func1(func2);
+        function func1(callback){
+            setTimeout(() => {
+                console.log("Task 1");
+                callback();
+            }, 5000)
+        }
+
+        function func2(){
+            console.log("Task 2");
+            console.log("Task 3");
+            console.log("Task 4");
+        }
+
+        func1(func2);
+}, 3001)
