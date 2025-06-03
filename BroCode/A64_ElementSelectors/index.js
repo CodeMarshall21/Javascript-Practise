@@ -31,7 +31,7 @@ Array.from(myClass).forEach((classes) => {
 });
 
 // for(let classes of myClass){
-//     classes.style.backgroundColor = "hsl(0, 0%, 60%)"
+//     classes.style.backgroundColor = "hsl(0, 0%, 60%)"  <--------- THIS CAN BE ALSO DONE 
 // }
 
 console.log(``)
@@ -45,9 +45,10 @@ console.log(`document.getElementsByTagName("h3") => `,h3Tag);
 Array.from(h3Tag).forEach((h3Tags) => {
     h3Tags.style.fontFamily = "cursive";
 })
-
 console.log(``)
 
 // ---------- querySelector() ----------
+
+
 
 // ---------- querySelectorAll() ----------
