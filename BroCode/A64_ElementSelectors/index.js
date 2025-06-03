@@ -55,4 +55,15 @@ firsOccuranceOfList.style.fontSize = "30px"
 
 
 console.log(``)
+
 // ---------- querySelectorAll() ----------
+console.log(`---------- querySelectorAll() ----------`)
+
+const listItems = document.querySelectorAll("li")
+console.log(`document.querySelectorAll("li") => `,listItems);
+
+listItems.forEach((eachListItem) => {
+    eachListItem.style.backgroundColor = "lightgreen";
+})
+
+console.log(``)
