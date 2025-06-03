@@ -48,7 +48,11 @@ Array.from(h3Tag).forEach((h3Tags) => {
 console.log(``)
 
 // ---------- querySelector() ----------
+console.log(`---------- querySelector() ----------`)
+const firsOccuranceOfList = document.querySelector("li");
+console.log(`document.querySelector("li") => `,firsOccuranceOfList)
+firsOccuranceOfList.style.fontSize = "30px"
 
 
-
+console.log(``)
 // ---------- querySelectorAll() ----------
