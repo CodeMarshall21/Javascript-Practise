@@ -21,7 +21,20 @@ h1Element.style.textAlign = "center"
 console.log(``)
 
 // ---------- getElementsByClassName() ----------
+console.log(`---------- getElementsByClassName() ----------`)
 
+const myClass = document.getElementsByClassName("my-class");
+console.log(`document.getElementsByClassName("my-class") => `,myClass)
+
+Array.from(myClass).forEach((classes) => {
+    classes.style.backgroundColor = "hsl(0, 0%, 60%)"
+});
+
+// for(let classes of myClass){
+//     classes.style.backgroundColor = "hsl(0, 0%, 60%)"
+// }
+
+console.log(``)
 
 // ---------- getElementsByTagName() ----------
 
