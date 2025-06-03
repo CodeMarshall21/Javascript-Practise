@@ -69,12 +69,44 @@ console.log(``);
 
 // ---------- .parentElement ----------
 console.log(`---------- .parentElement ----------`);
+const fruits1 = document.querySelectorAll("#fruits li")
+const vegetables1 = document.querySelectorAll("#vegetables li")
+const dessert = document.querySelectorAll("#desserts li")
+const ulItems = document.querySelectorAll("#container ul")
 
+fruits1.forEach((fruit) =>{
+    console.log(`${fruit.textContent}.parentElement => `, fruit.parentElement.id)
+});
+
+console.log(``);
+
+vegetables1.forEach((vegetable) =>{
+    console.log(`${vegetable.textContent}.parentElement => `, vegetable.parentElement.id)
+})
+
+console.log(``)
+
+dessert.forEach((dessert) =>{
+    console.log(`${dessert.textContent}.parentElement => `, dessert.parentElement.id)
+})
+
+console.log(``)
+
+ulItems.forEach((ulItem) =>{
+    console.log(`${ulItem.id}.parentElement => `, ulItem.parentElement.id)
+})
 
 console.log(``);
 
 // ---------- .children ----------
 console.log(`---------- .children ----------`);
+
+ulItems.forEach((ulItem) => {
+    console.log(`${ulItem.id}.children =>`);
+    Array.from(ulItem.children).forEach((child) => {
+        console.log(child.textContent);
+    });
+});
 
 
 console.log(``);
