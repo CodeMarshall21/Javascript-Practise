@@ -14,7 +14,7 @@ body{
     overflow: hidden;
 }
 
-#display{
+#display {
     width: 100%;
     padding: 20px;
     font-size: 5rem;
@@ -22,7 +22,12 @@ body{
     border: none;
     background-color: hsl(0, 0%, 20%);
     color: white;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: block;
 }
+
 
 #keys{
     display:grid;
