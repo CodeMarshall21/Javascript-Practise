@@ -9,3 +9,18 @@
 console.log(document)
 console.dir(document)
 
+document.title = "DOM"
+
+document.body.style.backgroundColor = "hsl(0, 0%, 15%)";
+
+console.log(`
+    document.title = "DOM"
+
+    document.body.style.backgroundColor = "hsl(0, 0%, 15%)";
+    `)
+
+const username = window.prompt("Enter Username");
+
+const welcome_msg = document.getElementById("welcome-msg")
+
+welcome_msg.textContent += username === "" ? "Guest" : username;
