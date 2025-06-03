@@ -38,15 +38,15 @@ console.log(`---------- .nextElementSibling ----------`);
 
 const fruits = document.querySelectorAll("#fruits li");
 
-fruits.forEach((fruit) => {
-    const nextFruit = fruit.nextElementSibling;
+fruits.forEach((fruit)=>{
+    const nextElement = fruit.nextSibilingElement;
 
-    if (nextFruit) {
-        console.log(`${fruit.textContent}.nextElementSibling = ${nextFruit.textContent}`);
-    } else {
-        console.log(`${fruit.textContent}.nextElementSibling = null`);
+    if (nextElement){
+        console.log(`${fruit.textContent}.nextElementSibiling => ${nextElement}`)
+    }else{
+        console.log(`${fruit.textContent}.nextElementSibiling => null`)
     }
-});
+})
 
 console.log(``);
 
