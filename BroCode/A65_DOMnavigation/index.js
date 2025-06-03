@@ -110,4 +110,3 @@ ulItems.forEach((ulItem) => {
 
 
 console.log(``);
-
