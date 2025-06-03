@@ -36,6 +36,17 @@ console.log(``);
 // ---------- .nextElementSibling ----------
 console.log(`---------- .nextElementSibling ----------`);
 
+const fruits = document.querySelectorAll("#fruits li");
+
+fruits.forEach((fruit) => {
+    const nextFruit = fruit.nextElementSibling;
+
+    if (nextFruit) {
+        console.log(`${fruit.textContent}.nextElementSibling = ${nextFruit.textContent}`);
+    } else {
+        console.log(`${fruit.textContent}.nextElementSibling = null`);
+    }
+});
 
 console.log(``);
 
