@@ -15,7 +15,7 @@ const ulElements = document.querySelectorAll("ul");
 
 ulElements.forEach((ulElement) => {
     const firstChild = ulElement.firstElementChild;
-    console.log(ulElement,`.firstElementChild => `,firstChild)
+    console.log(`${ulElement.id}.firstElementChild => ${firstChild.textContent}`)
     firstChild.style.backgroundColor = "yellow";
 })
 
@@ -27,7 +27,7 @@ console.log(`---------- .lastElementChild ----------`);
 
 ulElements.forEach((ulElement) => {
     const lastChild = ulElement.lastElementChild;
-    console.log(ulElement,`.lastElementChild => `,lastChild)
+    console.log(`${ulElement.id}.lastElementChild => ${lastChild.textContent}`)
     lastChild.style.backgroundColor = "hsl(24, 98%, 80%)";
 })
 
