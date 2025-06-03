@@ -37,6 +37,16 @@ Array.from(myClass).forEach((classes) => {
 console.log(``)
 
 // ---------- getElementsByTagName() ----------
+console.log(`---------- getElementsByTagName() ----------`)
+
+const h3Tag = document.getElementsByTagName("h3");
+console.log(`document.getElementsByTagName("h3") => `,h3Tag);
+
+Array.from(h3Tag).forEach((h3Tags) => {
+    h3Tags.style.fontFamily = "cursive";
+})
+
+console.log(``)
 
 // ---------- querySelector() ----------
 
