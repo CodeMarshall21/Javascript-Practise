@@ -25,6 +25,11 @@ console.log(``);
 // ---------- .lastElementChild ----------
 console.log(`---------- .lastElementChild ----------`);
 
+ulElements.forEach((ulElement) => {
+    const lastChild = ulElement.lastElementChild;
+    console.log(ulElement,`.lastElementChild => `,lastChild)
+    lastChild.style.backgroundColor = "hsl(24, 98%, 80%)";
+})
 
 console.log(``);
 
