@@ -16,6 +16,7 @@ const h1Element = document.getElementById("my-h1")
 console.log(`document.getElementById("my-h1") => `,h1Element)
 h1Element.style.color = "blue"
 h1Element.textContent += " !"
+h1Element.style.textAlign = "center"
 
 console.log(``)
 
