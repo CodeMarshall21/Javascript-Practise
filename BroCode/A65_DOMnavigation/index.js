@@ -39,10 +39,10 @@ console.log(`---------- .nextElementSibling ----------`);
 const fruits = document.querySelectorAll("#fruits li");
 
 fruits.forEach((fruit)=>{
-    const nextElement = fruit.nextSibilingElement;
+    const nextElement = fruit.nextElementSibling;
 
     if (nextElement){
-        console.log(`${fruit.textContent}.nextElementSibiling => ${nextElement}`)
+        console.log(`${fruit.textContent}.nextElementSibiling => ${nextElement.textContent}`)
     }else{
         console.log(`${fruit.textContent}.nextElementSibiling => null`)
     }
