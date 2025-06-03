@@ -53,6 +53,17 @@ console.log(``);
 // ---------- .previousElementSibling ----------
 console.log(`---------- .previousElementSibling ----------`);
 
+const vegetables = document.querySelectorAll("#vegetables li");
+
+vegetables.forEach((vegetable)=>{
+    const prevElement = vegetable.previousElementSibling;
+
+    if (prevElement){
+        console.log(`${vegetable.textContent}.previousElementSibling => ${vegetable.textContent}`)
+    }else{
+        console.log(`${vegetable.textContent}.previousElementSibling => null`)
+    }
+})
 
 console.log(``);
 
