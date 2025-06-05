@@ -3,30 +3,30 @@
 //                            .addEventListener(event, callback);
 
 const box = document.getElementById("box");
-
+const button = document.getElementById("myButton");
 
 function changeColor(event){
     console.log(`event => `,event);
-    event.target.style.backgroundColor = "tomato";
-    event.target.textContent = "OUCH ! 🤕";
+    box.style.backgroundColor = "tomato";
+    box.textContent = "OUCH ! 🤕";
     console.log(`click event listened !`);
     console.log(``);
 }
 
-box.addEventListener("click", changeColor);
+button.addEventListener("click", changeColor);
 
-box.addEventListener("mouseover",function(event){
+button.addEventListener("mouseover",function(event){
     console.log(`event => `,event);
-    event.target.style.backgroundColor = "yellow";
-    event.target.textContent = "Don't do it ! 😲";
+    box.style.backgroundColor = "yellow";
+    box.textContent = "Don't do it ! 😲";
     console.log(`mouseover event listened !`);
     console.log(``);
 })
 
-box.addEventListener("mouseout", event => {
+button.addEventListener("mouseout", event => {
     console.log(`event => `,event);
-    event.target.style.backgroundColor = "lightgreen";
-    event.target.textContent = "Click Me 😀";
+    box.style.backgroundColor = "lightgreen";
+    box.textContent = "Click Me 😀";
     console.log(`mouseout event listened !`);
     console.log(``);
 })
