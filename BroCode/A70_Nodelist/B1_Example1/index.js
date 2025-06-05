@@ -12,13 +12,13 @@ let buttons = document.querySelectorAll(".my-buttons");
 console.log(buttons);
 // ---------- ADD HTML/CSS PROPERTIES ----------
 
-// buttons.forEach(button => {
-//     setTimeout(() => {
-//         button.style.backgroundColor = "lightgreen";
-//         button.textContent += "😲";
-//     }
-//         , 3000)
-// })
+buttons.forEach(button => {
+    setTimeout(() => {
+        button.style.backgroundColor = "lightgreen";
+        button.textContent += "😲";
+    }
+        , 3000)
+})
 
 // ---------- CLICK event listener ---------- 
 
