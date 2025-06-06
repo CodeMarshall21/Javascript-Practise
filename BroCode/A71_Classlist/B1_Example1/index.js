@@ -22,22 +22,31 @@ button.classList.add("enabled");
 
 //using  .toggle()
 button.addEventListener("mouseover", event => {
+    console.log(``);
     button.classList.toggle("hover");
+    console.log(`button.classList.toggle("hover") => `,button.classList);
 })
 
 button.addEventListener("mouseout", event => {
+    console.log(``);
     button.classList.toggle("hover");
+    console.log(`button.classList.toggle("hover") => `,button.classList);
 })
 
 //.replace(oldclass, newclass) and .contains()
 button.addEventListener("click", event => {
     
     if(button.classList.contains("disabled")){
+        console.log(``);
         button.classList.replace("disabled", "enabled");
         button.textContent = "Click me ! 😀"
+        console.log(`button.classList.replace("disabled", "enabled") => `,button.classList);
+
     }
     else{
+        console.log(``);
         button.classList.replace("enabled", "disabled");
         button.textContent = "Disabled ! 😴";
+        console.log(`button.classList.replace("enabled", "disabled") = > `,button.classList);
     }
 })
