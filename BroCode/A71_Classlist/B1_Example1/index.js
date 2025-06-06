@@ -29,3 +29,15 @@ button.addEventListener("mouseout", event => {
     button.classList.toggle("hover");
 })
 
+//.replace(oldclass, newclass) and .contains()
+button.addEventListener("click", event => {
+    
+    if(button.classList.contains("disabled")){
+        button.classList.replace("disabled", "enabled");
+        button.textContent = "Click me ! 😀"
+    }
+    else{
+        button.classList.replace("enabled", "disabled");
+        button.textContent = "Disabled ! 😴";
+    }
+})

@@ -15,3 +15,8 @@
     box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
     font-weight: bold;
 }
+
+.disabled{
+    background-color: hsl(0, 0%, 60%);
+    color: hsl(0, 0%, 80%);
+}
