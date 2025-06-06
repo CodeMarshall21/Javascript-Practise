@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider(){
     slider[slideIndex].classList.add("displaySlide");
-    intervalID = setInterval(nextSlide,1000);
+    intervalID = setInterval(nextSlide,3000);
 }
 
 function showSlide(slideIndex){
