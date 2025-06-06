@@ -38,7 +38,15 @@ h1{
 }
 
 #resultDisplay{
-    color:#F3A26D;
+    /* color:#F3A26D; */
     font-size:4rem;
     margin:50px 0px;
+}
+
+.greenDisplay{
+    color: #9FC87E;
+}
+
+.redDisplay{
+    color: #FF3F33;
 }
