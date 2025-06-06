@@ -1,7 +1,7 @@
 // IMAGE SLIDER
 
 const slider = document.querySelectorAll(".slides img");
-
+const totalSlides = slider.length;
 let intervalID = null;
 let slideIndex = 0;
 
@@ -25,11 +25,11 @@ function showSlide(slideIndex){
 function prevSlide(){
     clearInterval(intervalID);
     console.log(`Slider stopped`)
-    slideIndex = (slideIndex - 1 + 3) % 3;
-    showSlide(Math.abs(slideIndex % 3));
+    slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+    showSlide(slideIndex);
 }
 
 function nextSlide(){
-    slideIndex = (slideIndex + 1) % 3;
-    showSlide(slideIndex % 3);
+    slideIndex = (slideIndex + 1) % totalSlides;
+    showSlide(slideIndex);
 }
