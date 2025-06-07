@@ -48,3 +48,83 @@ walkDog(()=>{
 
 // ----------------- INSTEAD WE DO ----------------- 
 
+function walkDog(){
+    return new Promise((resolve,reject) => {
+        const walking = true;
+
+        if (walking){
+            setTimeout(() =>{
+            resolve("YOU WALKED THE DOG");
+            }, 1500)
+        }else{
+            reject("YOU DID NOT WALK THE DOG !");
+        }
+        
+    })
+}
+
+function cleanKitchen(){
+    return new Promise((resolve,reject) => {
+        const cleaning = true;
+
+        if (cleaning){
+            setTimeout(() =>{
+            resolve("YOU CLEANED THE KITCHEN");
+            }, 3000)
+        }else{
+            reject("YOU DID NOT CLEAN THE KITCHEN !");
+        }
+        
+    })
+}
+
+function takeTrash(){
+    return new Promise((resolve,reject) => {
+        const trash = true;
+
+        if (trash){
+            setTimeout(() =>{
+            resolve("YOU TOOK THE TRASH");
+            }, 500)
+        }else{
+            reject("YOU DID NOT TAKE THE TRASH !");
+        }
+        
+    })
+}
+
+/*
+NOW USE THE object retuned by the `new Promise(resolve, reject)`
+then use .then() function in it to resolve whether it is a "resolve"
+or "reject"
+
+promise.then(
+  function(result) { handle a successful result  },
+  function(error) {  handle an error }
+);
+
+here we do "chaining" in order to replace callback hell
+*/
+
+walkDog().then(
+    (value) => {
+        console.log(value);
+        return cleanKitchen();
+    }
+).then(
+    (value) => {
+        console.log(value);
+        return takeTrash();
+    }
+).then(
+    (value) => {
+        console.log(value);
+        console.log("---- YOU FINISHED ALL THE CHORES ----");
+    }
+).catch(    //.catch(error)   <--- to catch eny error
+    (value) =>{
+        console.error(value);
+    }
+)
+
+
