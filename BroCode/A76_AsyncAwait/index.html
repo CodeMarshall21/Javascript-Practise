@@ -9,41 +9,60 @@
 <body>
 
     <pre>
-        Imagine that you’re a top singer, and fans ask day and night for your upcoming song.
+        Async/await
+There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It’s surprisingly easy to understand and use.
 
-To get some relief, you promise to send it to them when it’s published. You give your fans a list. They can fill in their email addresses, so that when the song becomes available, all subscribed parties instantly receive it. And even if something goes very wrong, say, a fire in the studio, so that you can’t publish the song, they will still be notified.
+Async functions
+Let’s start with the async keyword. It can be placed before a function, like this:
 
-Everyone is happy: you, because the people don’t crowd you anymore, and fans, because they won’t miss the song.
+async function f() {
+  return 1;
+}
+The word “async” before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.
 
-This is a real-life analogy for things we often have in programming:
+For instance, this function returns a resolved promise with the result of 1; let’s test it:
 
-A “producing code” that does something and takes time. For instance, some code that loads the data over a network. That’s a “singer”.
-A “consuming code” that wants the result of the “producing code” once it’s ready. Many functions may need that result. These are the “fans”.
-A promise is a special JavaScript object that links the “producing code” and the “consuming code” together. In terms of our analogy: this is the “subscription list”. The “producing code” takes whatever time it needs to produce the promised result, and the “promise” makes that result available to all of the subscribed code when it’s ready.
-The analogy isn’t terribly accurate, because JavaScript promises are more complex than a simple subscription list: they have additional features and limitations. But it’s fine to begin with.
+async function f() {
+  return 1;
+}
 
-The constructor syntax for a promise object is:
+f().then(alert); // 1
+…We could explicitly return a promise, which would be the same:
 
-let promise = new Promise(function(resolve, reject) {
-  // executor (the producing code, "singer")
-});
-The function passed to new Promise is called the executor. When new Promise is created, the executor runs automatically. It contains the producing code which should eventually produce the result. In terms of the analogy above: the executor is the “singer”.
+async function f() {
+  return Promise.resolve(1);
+}
 
-Its arguments resolve and reject are callbacks provided by JavaScript itself. Our code is only inside the executor.
+f().then(alert); // 1
+So, async ensures that the function returns a promise, and wraps non-promises in it. Simple enough, right? But not only that. There’s another keyword, await, that works only inside async functions, and it’s pretty cool.
 
-When the executor obtains the result, be it soon or late, doesn’t matter, it should call one of these callbacks:
+Await
+The syntax:
 
-resolve(value) — if the job is finished successfully, with result value.
-reject(error) — if an error has occurred, error is the error object.
-So to summarize: the executor runs automatically and attempts to perform a job. When it is finished with the attempt, it calls resolve if it was successful or reject if there was an error.
+// works only inside async functions
+let value = await promise;
+The keyword await makes JavaScript wait until that promise settles and returns its result.
 
-The promise object returned by the new Promise constructor has these internal properties:
+Here’s an example with a promise that resolves in 1 second:
 
-state — initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called.
-result — initially undefined, then changes to value when resolve(value) is called or error when reject(error) is called.
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+The function execution “pauses” at the line (*) and resumes when the promise settles, with result becoming its result. So the code above shows “done!” in one second.
+
+Let’s emphasize: await literally suspends the function execution until the promise settles, and then resumes it with the promise result. That doesn’t cost any CPU resources, because the JavaScript engine can do other jobs in the meantime: execute other scripts, handle events, etc.
     </pre>
 
-    <a href = "https://javascript.info/promise-basics">More about Promises {MUST READ}</a>
+    <a href = "https://javascript.info/async-await">More about Promises {MUST READ}</a>
     <script src = "index.js"></script>
 </body>
 </html>
