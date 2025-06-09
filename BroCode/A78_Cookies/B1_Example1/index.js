@@ -35,10 +35,10 @@ function deleteCookies(name){
 }
 
 // deleteCookies("firstName");
+//deleteCookies("lastName");
 // console.log(getCookies("firstName"))
 
-deleteCookies("lastName");
+// let allCookies = document.cookie;
+// console.dir(allCookies)
+// console.log(allCookies.split("; "))
 
-let allCookies = document.cookie;
-console.dir(allCookies)
-console.log(allCookies.split("; "))
