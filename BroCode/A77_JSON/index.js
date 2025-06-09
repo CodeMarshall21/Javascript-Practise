@@ -101,3 +101,15 @@ const peopleStringJson = JSON.parse(peopleString);
 console.log(`const namesStringJson = JSON.parse(namesString) => `,namesStringJson);
 console.log(`const personStringJson = JSON.parse(personString) => `,personStringJson);
 console.log(`const peopleStringJson = JSON.parse(peopleString) => `,peopleStringJson);
+
+console.log(``);
+
+console.log(`---------- fetch() ----------`);
+
+fetch("people.json").then(
+    response => response.json()
+).then(
+    values => values.forEach(
+        value => console.log(value)
+    )
+)
