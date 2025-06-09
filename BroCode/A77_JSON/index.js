@@ -53,3 +53,51 @@ console.log(`const peopleJsonString = JSON.stringify(people) => `,peopleJsonStri
 
 console.log(``);
 
+console.log(`---------- JSON.parse() ----------`);
+
+const namesString = `["spongebob","patrick","squidward","sandy"]`;
+
+const personString = `{
+    "First name": "Spongebob",
+    "Last name" : "Squarepants",
+    "age": 30,
+    "hobbies":["Karate", "Jellyfishing", "Cooking"],
+    "isEmployed": true
+}`;
+
+const peopleString = `[
+    {
+        "First name": "Spongebob",
+        "Last name" : "Squarepants",
+        "age": 30,
+        "isEmployed": true
+    },
+    {
+        "First name": "Squiward",
+        "Last name" : "Quincy",
+        "age": 35,
+        "isEmployed": true
+    },
+    {
+        "First name": "Patrick",
+        "Last name" : "Star",
+        "age": 32,
+        "isEmployed": false
+    },
+    {
+        "First name": "Sandy",
+        "Last name" : "Jennifer",
+        "age": 25,
+        "isEmployed": true
+    }
+]`;
+
+
+const namesStringJson = JSON.parse(namesString);
+const personStringJson = JSON.parse(personString);
+const peopleStringJson = JSON.parse(peopleString);
+
+
+console.log(`const namesStringJson = JSON.parse(namesString) => `,namesStringJson);
+console.log(`const personStringJson = JSON.parse(personString) => `,personStringJson);
+console.log(`const peopleStringJson = JSON.parse(peopleString) => `,peopleStringJson);
