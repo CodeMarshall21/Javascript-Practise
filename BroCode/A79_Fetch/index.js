@@ -9,8 +9,6 @@ async function fetchData(){
 
     try {
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase().trim();
-        // const pokemonFrontImage = document.getElementById("pokemonFrontImage");
-        // const pokemonBackImage = document.getElementById("pokemonBackImage");
         const pokemonImage = document.querySelectorAll(".pokemonImage");
 
 
@@ -22,6 +20,7 @@ async function fetchData(){
 
         const data = await response.json();
         console.log(data)
+        
         const pokemonBackShinySprite = data.sprites.back_shiny;
         const pokemonFrontShinySprite = data.sprites.front_shiny;
 
