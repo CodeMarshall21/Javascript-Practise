@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", async event =>{
             displayWeatherInfo(weatherData);
 
         }catch(error){
-            console.error(`error`);
+            console.error(`${error}`);
             displayError(error);
         }
 
@@ -25,6 +25,14 @@ weatherForm.addEventListener("submit", async event =>{
 });
 
 async function weatherInfo(city){
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`;
+
+    const cityWeatherData = await fetch(apiURL);
+    if(!cityWeatherData.ok){
+        throw new Error("Kadal laye illayam !");
+    }else{
+        return await cityWeatherData.json();
+    }
 }
 
 function displayWeatherInfo(data){
